@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.7rem;
+}
+
+:root{
+    --main-color: hsl(86, 88%, 73%);
+    --bg-color: #fff;
+    --text-color: black;
+    --hover: hsl(260,100%,51%);
+    --big-font: 3.5rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.938rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+*::selection{
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+
+section{
+    padding: 50px 10%;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 18px 10%;
+    transition: 0.5s;
+}
+
+header.shadow{
+    box-shadow: 0 0 4px rgb(14 55 54/15%);
+}
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.navbar{
+    display: flex;
+
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+
+.navbar a:hover{
+    color: var(--hover);
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+
+
+
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* grid-template-columns: 0.2 1fr 1fr; */
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.home-img{
+    order: 3;
+    position: relative;
+    right: -20%;
+
+}
+
+.home-img img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    
+}
+
+.home-text span{
+    font-size: var(--medium-font);
+    font-weight: 500;
+}
+
+.home-text h1{
+    font-size: var(--big-font);
+}
+
+.home-text h2{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.home-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0.7rem 0 1rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--main-color);
+    color: black;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in;
+    margin-top: 2rem;
+}
+
+.btn:hover{
+    background: var(--hover);
+    color: white;
+    
+}
+
+.heading{
+    text-align: center;
+
+    h2{
+        font-size: var(--medium-font);
+    }
+
+    span{
+        font-size: var(--p-font);
+    }
+}
+
+
+
+/* .about-container{
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+  
+
+/* .about-img{
+    height: 60%;
+    width: 60%;
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 0.5rem;
+    height: 100%;
+    
+} */ */
+
+.about-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.8rem;
+    margin-top:4rem ;
+}
+
+.skills-img img{
+    width: 100%;
+    padding-left: 4rem;
+    object-position: center;
+    border-radius: 50%;
+
+}
+
+
+
+.bars-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.bars-box h3, span{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.light-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: hsla(260, 100%, 44%, 0.4);
+    border-radius: 0.5rem;
+
+}
+
+.percent-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 0.5rem;
+}
+
+.html-bar{
+    width: 80%;
+}
+
+.css-bar{
+    width: 65%;
+}
+
+.js-bar{
+    width: 40%;
+}
+
+.contact-form{
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+
+}
+
+form input,
+textarea{
+    padding: 12px;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: hsla(260, 100%, 44%, 0.1);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+
+}
+
+form input::placeholder,
+textarea::placeholder{
+    color: var(--text-color);
+}
+
+form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contact-button{
+    width: 80px;
+    cursor: pointer;
+    background: var(--main-color);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in;
+}
+
+.contact-button:hover{
+    width: 300px;
+    background: aquamarine;
+
+}
+
+.footer{
+    display: grid;
+    place-items: center;
+    padding: 50px;
+    background: var(--main-color);
+    color: white;
+
+    h2{
+        font-size: var(--medium-font);
+        margin-bottom: 1.4rem;
+    }
+
+
+}
+
+.footer-social a{
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+}
+
+
+.copyright{
+    padding: 20px;
+    background-color: var(--main-color);
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project-box{
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 2px 7px rgb(14 55 54/15%);
+}
+
+.project-box h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+}
+
+.project-box .bx{
+    padding-top: 2rem;
+    font-size: 24px;
+    /* color: var(--main-color); */
+
+}
+
+.project-box a{
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+}
+
